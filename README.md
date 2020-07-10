@@ -12,6 +12,7 @@ By intergrating two diffrent "Beats"
 -Filebeat which logs all file all changes to any Files on the machine its intalled on
 -Metricbeat which logs all "hardware changes" like memory usage and Cpu usage.
 
+[My VM's](Images/Azure_VM's)
 
 #Configuration Details
 | Name     | Function | IP Address | Operating System |
@@ -22,13 +23,17 @@ By intergrating two diffrent "Beats"
 | web3     |          | 10.0.0.9   | Linux            |
 # in my diagram i have a "web-04" but that cost money so I couldnt add it too my network
 
+[Network Diagram](https://drive.google.com/file/d/1q7qcvperYsowUeJXhhus7YpmL-X0VlBN/view?usp=sharing)
+
 ### Access policies
 All of the Web-0* Vms are not exposed to the internet the only machine accessable by the internet is my JumpBox-Provisioner
-The ip address that is on the whitelist is my local IP, and i assume the JumpBox @ 10.0.0.1
+The ip address that is on the whitelist is my local IP, and I assume the JumpBox @ 10.0.0.1
 
 ###ELK Configuration 
-We used ansible to audomate configuration of the Elk machine. No configuration was preformed manually.
+We used ansible to automate configuration of the Elk machine. No configuration was preformed manually.
 one of the advantages to automating the configuration is if we need to update or change something we dont have to do a buch of manual changes we can just modify the Configuration file.
+
+[hosts file](Images/ansible_hosts)
 
 #Steps to Elk Installation
 -make an ELK VM
@@ -88,21 +93,37 @@ my playbook looks more or less like this
 
 -then try to access it with http://<ELK's network VM's ip>:5601/app/kibana
 
-[Scnshot of Docker ps output]
+[Scnshot of Docker ps output](Images/Entering_ELK)
 
 ### Target Machiens & Beats
 This Elk server is configured to monitor all of the machines under te Webservers list in th /etc/ansible/hosts file
 web-01,02 & 03
 
-We've successfully installed metric and filebeat onto the ELK server and set them to monitor hosts: webservers in the hosts file
+[hosts file](Images/ansible_hosts)
+
+
+
+
+we've succsessfully installed metric and Filebeat onto our Elkstack server to monitor the machines under the webservers in the /etc/ansible/hosts file.
 	- metricbeat monitors things like memory and CPU usage on the machines along with other Metrics. allowing us to keep an eye on viruses, and crypto mining. it hels us monitor how things are being used on the VM's
 	- Filebeat monitors our log files and looks for changes and keeps track of when things were accessed and used. if someone were to move the file we would know
+
+[Filebeat yml](Images/Filebeat_yml)
+
+[metricbeat yml](Images/Metric_yml)
+
 # Using the playbook
 first to run the playbook you need to get into the Docker container with the ansible installed on there
 copy the Yml file to /etc/ansible/someplaybook.yml
 update the yml file to include the correct image and published_port
 then run the playbook with -> ansible-playbook /etc/ansible/someplaybook.yml
+
+[elkstack yml](Images/Elkstack_yml)
+
 navigate to http://<the IP of the VM installed with the playbook>:5601/app/kibana
+
+[kibana url in use](Images/Kibana_URL_Works)
+
 #this is for the Elk stack server
 DVWA is http://<VM's Ip>/setup
 #DVWA has its own playbook
@@ -116,7 +137,7 @@ Remember the URL to the Elk server is http://<Elk's Ip>:5601/app/kibana
 #Commands:
 #run the playbook = ansible-playbook /etc/ansible/install-Elk.yml
   
-
+[playbook ran](Images/ELK_playbook_Ran)
 
 
 
