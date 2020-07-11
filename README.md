@@ -18,7 +18,7 @@ by intergrating two diffrent "Beats".
 	intalled on.
 	-Metricbeat which logs all "hardware changes" like memory usage and Cpu usage.
 
-![My VM's](./Images/Azure_VM's.png)
+![My VM's](./Images/ELKstack_HwProject/Azure_VM's.png)
 
 #Configuration Details
 | Name     | Function | IP Address | Operating System |
@@ -29,7 +29,7 @@ by intergrating two diffrent "Beats".
 | web3     |          | 10.0.0.9   | Linux            |
 # in my diagram i have a "web-04" but that cost money so I couldnt add it too my network
 
-![Network Diagram](https://drive.google.com/file/d/1q7qcvperYsowUeJXhhus7YpmL-X0VlBN/view?usp=sharing)
+![Network Diagram](./Resources/Finished_elknet_diagram.png)
 
 ### Access policies
 All of the Web-0* Vms are not exposed to the internet the only machine accessable 
