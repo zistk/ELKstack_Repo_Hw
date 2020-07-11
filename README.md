@@ -18,7 +18,7 @@ by intergrating two diffrent "Beats".
 	intalled on.
 	-Metricbeat which logs all "hardware changes" like memory usage and Cpu usage.
 
-![My VM's](./Images/ELKstack_HwProject/"Azure_VM's.png")
+![My VM's](./Images/ELKstack_HwProject/Azure_VMs.png)
 
 #Configuration Details
 | Name     | Function | IP Address | Operating System |
@@ -147,7 +147,7 @@ the machines under the webservers in the /etc/ansible/hosts file.
 
 	- then navigate to http://<the IP of the VM installed with the playbook>:5601/app/kibana
 
-![kibana url in use](./Images/Elkstack_HwProject/Kibana_URL_Works.png.png)
+![kibana url in use](./Images/Elkstack_HwProject/Kibana_URL_Works.png)
 
 #this is for the Elk stack server
 DVWA is http://<VM's Ip>/setup
