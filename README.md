@@ -18,7 +18,7 @@ by intergrating two diffrent "Beats".
 	intalled on.
 	-Metricbeat which logs all "hardware changes" like memory usage and Cpu usage.
 
-[My VM's](./Images/Azure_VM's)
+![My VM's](./Images/Azure_VM's.png)
 
 #Configuration Details
 | Name     | Function | IP Address | Operating System |
@@ -29,7 +29,7 @@ by intergrating two diffrent "Beats".
 | web3     |          | 10.0.0.9   | Linux            |
 # in my diagram i have a "web-04" but that cost money so I couldnt add it too my network
 
-[Network Diagram](https://drive.google.com/file/d/1q7qcvperYsowUeJXhhus7YpmL-X0VlBN/view?usp=sharing)
+![Network Diagram](https://drive.google.com/file/d/1q7qcvperYsowUeJXhhus7YpmL-X0VlBN/view?usp=sharing)
 
 ### Access policies
 All of the Web-0* Vms are not exposed to the internet the only machine accessable 
@@ -46,7 +46,7 @@ One of the advantages to automating the configuration is if we need to update
 or change something we dont have to do a bunch of manual changes allowing us 
 to just modify the Configuration file.
 
-[hosts file](./Images/Elkstack_HwProject/ansible_hosts)
+![hosts file](./Images/Elkstack_HwProject/ansible_hosts.png)
 
 #Steps to Elk Installation
 -Make an ELK VM #we used portal.azure
@@ -109,14 +109,14 @@ to just modify the Configuration file.
 
 	-then try to access it with http://<ELK's network VM's ip>:5601/app/kibana
 
-[Scnshot of Docker ps output](./Images/Elkstack_HwProject/Entering_ELK)
+![Scnshot of Docker ps output](./Images/Elkstack_HwProject/Entering_ELK.png)
 
 ### Target Machiens & Beats
 This Elk server is configured to monitor all of the machines under the Webservers list 
 in the /etc/ansible/hosts file
 web-01,02 & 03
 
-[hosts file](./Images/Elkstack_HwProject/ansible_hosts)
+![hosts file](./Images/Elkstack_HwProject/ansible_hosts.png)
 
 
 
@@ -131,9 +131,9 @@ the machines under the webservers in the /etc/ansible/hosts file.
 	- Filebeat monitors our log files and looks for changes and keeps track of when 
 	  things were accessed and used. if someone were to move the file we would know
 
-[Filebeat yml](./Images/Elkstack_HwProject/Filebeat_yml)
+![Filebeat yml](./Images/Elkstack_HwProject/Filebeat_yml.png)
 
-[metricbeat yml](./Images/Elkstack_HwProject/Metric_yml)
+![metricbeat yml](./Images/Elkstack_HwProject/Metric_yml.png)
 
 # Using the playbook
 
@@ -143,11 +143,11 @@ the machines under the webservers in the /etc/ansible/hosts file.
 	- update the yml file to include the correct image and published_port
 	- then run the playbook with -> ansible-playbook /etc/ansible/someplaybook.yml
 
-[elkstack yml](./Images/Elkstack_HwProject/Elkstack_yml)
+![elkstack yml](./Images/Elkstack_HwProject/Elkstack_yml.png)
 
 	- then navigate to http://<the IP of the VM installed with the playbook>:5601/app/kibana
 
-[kibana url in use](./Images/Elkstack_HwProject/Kibana_URL_Works)
+![kibana url in use](./Images/Elkstack_HwProject/Kibana_URL_Works.png.png)
 
 #this is for the Elk stack server
 DVWA is http://<VM's Ip>/setup
@@ -169,7 +169,7 @@ DVWA is http://<VM's Ip>/setup
 #Commands:
 #run the playbook = ansible-playbook /etc/ansible/install-Elk.yml
   
-[playbook ran](./Images/Elkstack_HwProject/ELK_playbook_Ran)
+![playbook ran](./Images/Elkstack_HwProject/ELK_playbook_Ran.png)
 
 
 
