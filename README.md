@@ -18,7 +18,7 @@ by intergrating two diffrent "Beats".
 	intalled on.
 	-Metricbeat which logs all "hardware changes" like memory usage and Cpu usage.
 
-![My VM's](./Images/ELKstack_HwProject/Azure_VM's.png)
+![My VM's](./Images/ELKstack_HwProject/"Azure_VM's.png")
 
 #Configuration Details
 | Name     | Function | IP Address | Operating System |
