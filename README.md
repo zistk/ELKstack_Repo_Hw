@@ -23,7 +23,7 @@ by integrating two different "Beats".
 	-Metricbeat which logs all "hardware changes" like memory usage and Cpu usage on 
 	 those same machines.
 
-![My VM's](./Images/ELKstack_HwProject/ALL_VM.png)
+![My VM's](./Images/Elkstack_HwProject/ALL_VM.png)
 
 #Configuration Details
 | Name     | Function | IP Address | Operating System |
