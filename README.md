@@ -9,14 +9,14 @@ The load balancer ensures that the application will be well kept on the cloud wh
 to the network.
 	- Load-balancers help sort and midigate too much traffic in the network, sorting the packets of 
 	  data into the individual VM's on the network Web-01, Web-02 and Web-03.
-	# A fourth or fith could be made, but as a class we used Microsoft.Azure to make our 
+	# A fourth or fifth could be made, but as a class we used Microsoft.Azure to make our 
 	# cloud network which charged me for any more then the ones I made.
 	we started with our jump-box, the jump box is exposed to the internet and is a center 
 	point of the network that will sit and allow traffic to run through my security group 
 	and access to my containers.
 
 after creating my cloud network we started work on the ELK server to allow users like 
-myself to monitor the vulnerable VM'0s for changes to the Logs and the system operations.
+myself to monitor the vulnerable VM's for changes to the Logs and the system operations.
 by integrating two different "Beats".
 	-Filebeat which logs all files, and all changes to any Files on the machine its 
 	 installed on. In this case the webservers1,2,3.
@@ -49,7 +49,7 @@ No configuration was proformed manually.
 
 One of the advantages to automating the configuration is if we need to update 
 or change something we don't have to do a bunch of manual changes allowing us 
-to just modify the Configuration filewhenever you wish to update the network.
+to just modify the Configuration file whenever you wish to update the network.
 
 ![hosts file](./Images/Elkstack_HwProject/ansible_hosts.png)
 
